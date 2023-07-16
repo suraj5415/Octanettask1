@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PoP!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#"><img src="img/logo.png" class="logo"></a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Trending</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>Collect.Connect.Conquer.<br></h2>
+                <h3>Action Figures rule at <span>PoP !</span></h3>
+                <p>Welcome to POP, the ultimate destination for action figure enthusiasts! Discover a curated collection of iconic characters, sourced with care for collectors like you. Explore our seamless online shopping experience and find the missing piece to complete your collection. Unleash your imagination and own a piece of pop culture history at POP.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="imgBox">
+                <h2 style="color: #543f32;" class="name">GAARA</h2>
+                <img src="img/anime.png" class="hero">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="img/anime.png" onclick="imgSlider('img/anime.png'); changeCircleColor('#543f32'); figureName('GAARA')"></li>
+            <li><img src="img/hulk.png" onclick="imgSlider('img/hulk.png'); changeCircleColor('#0b6623'); figureName('HULK')"></li>
+            <li><img src="img/blackPanter.png" onclick="imgSlider('img/blackPanter.png'); changeCircleColor('#2b0c37'); figureName('BLACK PANTHER')"></li>
+            <li><img src="img/pinkBunny.png" onclick="imgSlider('img/pinkBunny.png'); changeCircleColor('#ff99cc'); figureName('CUDDLE TEAM LEADER')"></li>
+            <li><img src="img/ironMan.png" onclick="imgSlider('img/ironMan.png'); changeCircleColor('#c62828'); figureName('IRON MAN')"></li>
+            <li><img src="img/blueHero.png" onclick="imgSlider('img/blueHero.png'); changeCircleColor('#00bfff'); figureName('ALPINE ACE')"></li>
+            <li><img src="img/fantastic4.png" onclick="imgSlider('img/fantastic4.png'); changeCircleColor('#0055ff'); figureName('INVISIBLE WOMAN')"></li>
+            <li><img src="img/thor.png" onclick="imgSlider('img/thor.png'); changeCircleColor('#8c1717'); figureName('THOR')"></li>
+            <li><img src="img/sonic.png" onclick="imgSlider('img/sonic.png'); changeCircleColor('#0073cf'); figureName('SONIC THE HEDGEHOG')"></li>
+        </ul>
+        <ul class="sci">
+            <li><a href="#"><img src="img/facebook.png"></a></li>
+            <li><a href="#"><img src="img/twitter.png"></a></li>
+            <li><a href="#"><img src="img/instagram.png"></a></li>
+        </ul>
+    </section>
+    <script type="text/javascript">
+        function imgSlider(anything){
+            document.querySelector('.hero').src = anything;
+        }
+
+        function changeCircleColor(color){
+            const circle = document.querySelector('.circle');
+            const name = document.querySelector('.imgBox .name');
+
+            circle.style.background = color;
+            name.style.color = color;
+        }
+
+        function figureName(figname) {
+            const name = document.querySelector('.imgBox .name');
+            name.textContent = figname;
+        }
+    </script>
+</body>
+</html>
